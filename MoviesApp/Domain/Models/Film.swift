@@ -36,9 +36,9 @@ enum typeFilm {
 // ****************************************************
 
 enum platformFilm: String {
-    case HBO = "image_1"
-    case netflix = "image_2"
-    case amazonPrimeVideo = "image_3"
-    case disneyPlus = "image_4"
-    case movistarPlus = "image_5"
+    case HBO = "HBO"
+    case netflix = "Netflix"
+    case amazonPrimeVideo = "Amazon"
+    case disneyPlus = "Disney"
+    case movistarPlus = "Movistar"
 }

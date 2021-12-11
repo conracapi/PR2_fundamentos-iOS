@@ -19,7 +19,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dAd-Oz-iGN">
                                 <rect key="frame" x="10" y="44" width="370" height="717"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.77647058823529413" green="1" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="U9R-x2-CN2">
                                     <size key="itemSize" width="200" height="300"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -43,13 +43,19 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lg1-ac-0Q5">
                                                             <rect key="frame" x="0.0" y="230" width="200" height="70"/>
                                                             <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre del libro que voy a pintar" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="sSr-RL-kRt">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
+                                                                    <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="18"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tBT-Pk-a7H">
                                                                     <rect key="frame" x="0.0" y="50" width="200" height="20"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7o-zP-5f9">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7o-zP-5f9">
                                                                             <rect key="frame" x="0.0" y="0.0" width="120" height="20"/>
-                                                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
-                                                                            <color key="textColor" red="1" green="0.36470588240000001" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
+                                                                            <color key="textColor" red="0.77647058823529413" green="1" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Netflix" translatesAutoresizingMaskIntoConstraints="NO" id="QVb-MO-HaP">
@@ -66,14 +72,8 @@
                                                                         <constraint firstAttribute="height" constant="20" id="sbx-fC-qdM"/>
                                                                     </constraints>
                                                                 </stackView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Este es el nombre del libro que voy a pintar" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSr-RL-kRt">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
-                                                                    <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="16"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
                                                             </subviews>
-                                                            <color key="backgroundColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="backgroundColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstItem="tBT-Pk-a7H" firstAttribute="leading" secondItem="Lg1-ac-0Q5" secondAttribute="leading" id="9RY-Fi-1Lw"/>
                                                                 <constraint firstAttribute="bottom" secondItem="tBT-Pk-a7H" secondAttribute="bottom" id="CbT-EE-isW"/>
@@ -107,12 +107,19 @@
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="customSize" width="200" height="300"/>
+                                        <connections>
+                                            <outlet property="imageFilm" destination="bQ1-06-foc" id="bes-bm-E3r"/>
+                                            <outlet property="mainView" destination="qbW-Gd-Hs0" id="n90-0T-lRk"/>
+                                            <outlet property="nameFilm" destination="sSr-RL-kRt" id="bCl-1d-awI"/>
+                                            <outlet property="platformFilm" destination="QVb-MO-HaP" id="Nxk-c7-RjK"/>
+                                            <outlet property="punctuacionFilm" destination="x7o-zP-5f9" id="zXi-Sw-hhe"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iT7-jv-M7x"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.77647058823529413" green="1" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="iT7-jv-M7x" firstAttribute="bottom" secondItem="dAd-Oz-iGN" secondAttribute="bottom" id="1zU-zi-hWG"/>
                             <constraint firstItem="dAd-Oz-iGN" firstAttribute="top" secondItem="iT7-jv-M7x" secondAttribute="top" id="Xfh-Nb-Jpn"/>
@@ -120,7 +127,7 @@
                             <constraint firstItem="iT7-jv-M7x" firstAttribute="trailing" secondItem="dAd-Oz-iGN" secondAttribute="trailing" constant="10" id="ziY-8G-KYQ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Acción" id="daV-71-gGu"/>
+                    <tabBarItem key="tabBarItem" title="Acción" image="action_icon" id="daV-71-gGu"/>
                     <connections>
                         <outlet property="collectionViewFilms" destination="dAd-Oz-iGN" id="Any-bK-Z47"/>
                     </connections>
@@ -137,9 +144,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="164" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="iGL-Ny-07o">
-                                <rect key="frame" x="0.0" y="44" width="390" height="717"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="164" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="iGL-Ny-07o">
+                                <rect key="frame" x="0.0" y="44" width="390" height="709"/>
+                                <color key="backgroundColor" red="0.77647058823529413" green="1" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TerrorFilmTableViewCell" rowHeight="164" id="wwC-qR-59d" customClass="TerrorFilmTableViewCell" customModule="MoviesApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="164"/>
@@ -149,32 +157,43 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QU9-o8-TsC">
-                                                    <rect key="frame" x="10" y="4" width="370" height="156"/>
+                                                    <rect key="frame" x="10" y="8" width="370" height="156"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Resplandor" translatesAutoresizingMaskIntoConstraints="NO" id="ZJN-Xp-JAV">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Alien" translatesAutoresizingMaskIntoConstraints="NO" id="ZJN-Xp-JAV">
                                                             <rect key="frame" x="8" y="8" width="93.333333333333329" height="140"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="ZJN-Xp-JAV" secondAttribute="height" multiplier="2:3" id="VVN-dR-X5z"/>
                                                             </constraints>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Hgb-us-SbG" userLabel="MainInfoSV">
-                                                            <rect key="frame" x="113.33333333333333" y="8" width="248.66666666666669" height="82"/>
+                                                            <rect key="frame" x="113.33333333333333" y="7.9999999999999929" width="248.66666666666669" height="124.33333333333331"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pesadilla en Elm Street (El origen)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="eYf-e5-6lQ">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="248.66666666666666" height="22"/>
-                                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pesadilla en Elm Street (El origen)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eYf-e5-6lQ">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="243.33333333333334" height="60.333333333333336"/>
+                                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duración: 2h 15 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5h-Hf-dre">
-                                                                    <rect key="frame" x="0.0" y="28" width="132.66666666666666" height="20.666666666666671"/>
-                                                                    <fontDescription key="fontDescription" name="Avenir-LightOblique" family="Avenir" pointSize="15"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="d5W-ar-Dbf">
+                                                                    <rect key="frame" x="0.0" y="66.333333333333329" width="172.33333333333334" height="24.666666666666671"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duración:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PL8-F9-sTc">
+                                                                            <rect key="frame" x="0.0" y="2" width="83.666666666666671" height="20.666666666666668"/>
+                                                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2h 15 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5h-Hf-dre">
+                                                                            <rect key="frame" x="88.666666666666657" y="0.0" width="83.666666666666657" height="24.666666666666668"/>
+                                                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7.5/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dy9-3L-7Dw">
-                                                                    <rect key="frame" x="0.0" y="54.666666666666679" width="61.666666666666664" height="27.333333333333336"/>
-                                                                    <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="20"/>
-                                                                    <color key="textColor" systemColor="systemPinkColor"/>
+                                                                    <rect key="frame" x="0.0" y="97" width="61.333333333333336" height="27.333333333333329"/>
+                                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                                                    <color key="textColor" systemColor="systemGrayColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -186,7 +205,7 @@
                                                             </constraints>
                                                         </imageView>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="9IH-Uh-pVf" secondAttribute="trailing" constant="10" id="2hd-zr-5V7"/>
                                                         <constraint firstItem="ZJN-Xp-JAV" firstAttribute="leading" secondItem="QU9-o8-TsC" secondAttribute="leading" constant="8" id="8Lx-ag-Zxa"/>
@@ -202,11 +221,12 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="QU9-o8-TsC" firstAttribute="leading" secondItem="d8z-zL-uDQ" secondAttribute="leading" constant="10" id="J7t-i4-QmC"/>
-                                                <constraint firstItem="QU9-o8-TsC" firstAttribute="top" secondItem="d8z-zL-uDQ" secondAttribute="top" constant="4" id="T6Y-2i-YJ4"/>
-                                                <constraint firstAttribute="bottom" secondItem="QU9-o8-TsC" secondAttribute="bottom" constant="4" id="lxF-gc-raL"/>
+                                                <constraint firstItem="QU9-o8-TsC" firstAttribute="top" secondItem="d8z-zL-uDQ" secondAttribute="top" constant="8" id="T6Y-2i-YJ4"/>
+                                                <constraint firstAttribute="bottom" secondItem="QU9-o8-TsC" secondAttribute="bottom" id="lxF-gc-raL"/>
                                                 <constraint firstAttribute="trailing" secondItem="QU9-o8-TsC" secondAttribute="trailing" constant="10" id="t3K-Dl-kdq"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.77647058823529413" green="1" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="durationFilm" destination="u5h-Hf-dre" id="Fu2-T5-uoK"/>
                                             <outlet property="imageFilm" destination="ZJN-Xp-JAV" id="bsE-Pe-rZj"/>
@@ -221,15 +241,15 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tjc-2P-JvU"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.77647058823529413" green="1" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="iGL-Ny-07o" firstAttribute="leading" secondItem="tjc-2P-JvU" secondAttribute="leading" id="Fbz-tU-ufT"/>
                             <constraint firstItem="iGL-Ny-07o" firstAttribute="top" secondItem="tjc-2P-JvU" secondAttribute="top" id="OhO-Le-712"/>
                             <constraint firstItem="tjc-2P-JvU" firstAttribute="trailing" secondItem="iGL-Ny-07o" secondAttribute="trailing" id="ib3-fZ-Uo9"/>
-                            <constraint firstItem="tjc-2P-JvU" firstAttribute="bottom" secondItem="iGL-Ny-07o" secondAttribute="bottom" id="uyr-VJ-yWw"/>
+                            <constraint firstItem="tjc-2P-JvU" firstAttribute="bottom" secondItem="iGL-Ny-07o" secondAttribute="bottom" constant="8" id="uyr-VJ-yWw"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Terror" id="D3V-gO-5IE"/>
+                    <tabBarItem key="tabBarItem" title="Terror" image="terror_icon" id="D3V-gO-5IE"/>
                     <connections>
                         <outlet property="tableViewFilms" destination="iGL-Ny-07o" id="ahF-Br-1v8"/>
                     </connections>
@@ -258,13 +278,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Alien" width="426.66665649414062" height="640"/>
         <image name="Netflix" width="487.33334350585938" height="139"/>
         <image name="Resplandor" width="426.66665649414062" height="640"/>
+        <image name="action_icon" width="25" height="25"/>
+        <image name="terror_icon" width="25" height="25"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
