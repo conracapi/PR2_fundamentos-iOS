@@ -9,6 +9,7 @@ import UIKit
 
 class DetailFilmViewController: UIViewController {
     
+    
     // MARK: - UI elements
     @IBOutlet weak var nameFilm: UILabel?
     @IBOutlet weak var summaryFilm: UIScrollView?
@@ -33,13 +34,17 @@ class DetailFilmViewController: UIViewController {
         self.infoAditionalView?.layer.borderWidth = 1.0
         self.infoAditionalView?.layer.borderColor = UIColor.systemGray.cgColor
         self.infoAditionalView?.layer.cornerRadius = 1.0
-        //
+        // Se pinta la información completa de la película en los diferentes elementos
+        // Esta información es la que viene dada desde la pantalla anterior que se envía
+        // a este viewController mediante el pushViewController y que se almacena en la
+        // variable pública films definida en esta misma clase
         self.nameFilm?.text = film.nameFilm
         self.resumeFilm?.text = film.summaryFilm
         self.actorsFilm?.text = ""
+        // Se hacen unos pequeños ajustes para pintar correctamente todos los actores
+        // en la etiqueta que le corresponde.
         if let actors = film.actorsFilm {
             for (index, act) in actors.enumerated() {
-                print(index)
                 if let text = self.actorsFilm?.text {
                     if (actors.count-1 == index) {
                         self.actorsFilm?.text = text + act + "."
@@ -54,7 +59,6 @@ class DetailFilmViewController: UIViewController {
         self.punctuationFilm?.text = String(film.punctuactionFilm ?? 0) + "/10"
         self.productionYear?.text = String(film.productionYearFilm ?? 0)
         self.imageFilm?.image = UIImage(named: film.imageFilm ?? "")
-                
     }
     
 }

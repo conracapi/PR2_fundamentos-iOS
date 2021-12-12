@@ -25,7 +25,6 @@ class TerrorFilmTableViewCell: UITableViewCell {
         // Personalización de los elementos de la celda
         self.mainView?.layer.cornerRadius = 10.0
         self.imageFilm?.layer.cornerRadius = 9.0
-        // Etiqueta de la puntuación
         self.punctuationFilm?.layer.borderWidth = 1.0
         self.punctuationFilm?.layer.borderColor = UIColor.systemGray.cgColor
         self.punctuationFilm?.layer.cornerRadius = 8.0
